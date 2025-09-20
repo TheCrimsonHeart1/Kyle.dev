@@ -1,8 +1,130 @@
-    body {
-        font-family: Georgia, serif;
-        background-color: #f0f0f0;
-    }
+/* Body and overall page style */
+body {
+    text-align: center;
+    font-family: Georgia, serif;
+    background-color: pink; /* Fallback color */
+    font-weight: bold;
+    margin: 0; /* Remove default body margin */
+}
 
-    h1 {
-        color: #333;
-    }
+/* Centered Heading (Fixed on top) */
+.centered-heading {
+    position: fixed;
+    top: 10px; /* Slightly below the top bar */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    z-index: 3;
+}
+
+/* YouTube and Github icon styles */
+.youtube-link, .github-link {
+    position: fixed;
+    top: 5px;
+    z-index: 3;
+}
+
+.youtube-link {
+    right: 20px; /* Align on the right */
+}
+
+.github-link {
+    left: 20px; /* Align on the left */
+}
+
+.youtube-icon, .github-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Top fixed color bar */
+.top-color-box {
+    background-color: rgb(230, 174, 183);
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Horizontal, Vertical, Blur, Color */
+}
+
+/* Main content container with rounded corners and background image */
+.background-container {
+    background-image: url('your-background.jpg'); /* Add your background image or use background-color */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    width: 90vw;          /* Full width minus some margin */
+    max-width: 1200px;    /* Max width for larger screens */
+    min-height: 90vh;     /* Ensure it's large enough to hold content */
+    margin: 80px auto 40px auto; /* Space around the container */
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: visible; /* Needed for inner content box shadow */
+}
+
+/* Inner content with a different background */
+.inner-content {
+    background-color: rgb(255, 216, 223); /* White background with slight transparency */
+    border-radius: 15px; /* Rounded corners inside */
+    padding: 30px 40px;
+    color: #333; /* Dark text for readability */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional subtle shadow */
+}
+
+/* Styling for h2 inside the inner content */
+.inner-content h2 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* Styling for paragraphs inside inner content */
+.inner-content p {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    font-weight: normal;
+    color: #333; /* Dark text */
+}
+
+/* Styling for flower image */
+.flower-inline {
+    width: 80px;
+    margin: 20px auto;
+    display: block;
+}
+/* Hide scrollbar but still allow scrolling */
+body::-webkit-scrollbar {
+    width: 0px;   /* For vertical scrollbar */
+    height: 0px;  /* For horizontal scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: transparent;  /* Hide the thumb (draggable part) */
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent; /* Hide the track */
+}
+.inner-content2 {
+    background-color: rgb(255, 216, 223); /* White background with slight transparency */
+    border-radius: 15px; /* Rounded corners inside */
+    padding: 30px 40px;
+    color: #333; /* Dark text for readability */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional subtle shadow */
+    margin-top: 20px;
+    font-weight: normal;
+}
+.inner-content3 {
+    background-color: rgb(255, 216, 223); /* White background with slight transparency */
+    border-radius: 15px; /* Rounded corners inside */
+    padding: 30px 40px;
+    color: #333; /* Dark text for readability */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional subtle shadow */
+    margin-top: 20px;
+    font-weight: normal;
+}
