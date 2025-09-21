@@ -1,41 +1,75 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Fixed Heading (Centered) -->
     <h1 class="centered-heading">Hello, World!</h1>
 
-    <!-- YouTube icon on the right -->
+    <!-- YouTube and Github Icons -->
     <a href="https://www.youtube.com/@Thecrimsonheart1" target="_blank" rel="noopener noreferrer" class="youtube-link">
         <img src="youtube_icon.png" alt="YouTube Channel" class="youtube-icon">
     </a>
-
-    <!-- Github icon on the left -->
     <a href="https://github.com/TheCrimsonHeart1" target="_blank" rel="noopener noreferrer" class="github-link">
         <img src="github-icon.png" alt="Github" class="github-icon">
     </a>
 
-    <!-- Top Color Box (Fixed) -->
+    <!-- Top Color Box -->
     <div class="top-color-box"></div>
 
-    <!-- Container for the main content with background and rounded corners -->
+    <!-- Container for main content -->
     <div class="background-container">
-        <!-- Inner content area with a different background color inside the container -->
+        <!-- Inner content for About Me and Skills -->
         <div class="inner-content">
             <h2>About Me</h2>
             <p>I'm Kyle, a coffee addict who codes.</p>
             <img src="flower.png" alt="Flower" class="flower-inline">
-            
         </div>
-            <div class="inner-content2">
+
+        <!-- Skills Section -->
+        <div class="inner-content2">
             <h2>Skills</h2>
             <p>• Python</p>
             <p>• C++</p>
             <p>• C#</p>
             <p>• Java</p>
         </div>
+
+        <!-- Project Tabs -->
+        <div class="tabs">
+            <button class="tablink" onclick="openProject(event, 'project1')">TCP Server</button>
+            <button class="tablink" onclick="openProject(event, 'project2')">Syntax</button>
+            <button class="tablink" onclick="openProject(event, 'project3')">Ransomware</button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="project1" class="tabcontent">
+            <h3>TCP Server</h3>
+            <p>This was a TCP Server I made in C, it allows multiple clients through multithreading.</p>
+            <!-- View Repo Button for Project 1 -->
+            <a href="https://github.com/TheCrimsonHeart1/tcp-server" target="_blank" class="repo-button">View Repo</a>
+        </div>
+
+        <div id="project2" class="tabcontent">
+            <h3>Syntax</h3>
+            <p>This is a keylogger made in python, it injects into the user's startup folder and uses a web server to send the keystrokes to my computer.</p>
+            <!-- View Repo Button for Project 2 -->
+            <a href="https://github.com/TheCrimsonHeart1/Syntax" target="_blank" class="repo-button">View Repo</a>
+        </div>
+
+        <div id="project3" class="tabcontent">
+            <h3>Ransomware</h3>
+            <p>Currently in development.</p>
+            <!-- View Repo Button for Project 3 -->
+            <a href="https://github.com/TheCrimsonHeart1/ransomware" target="_blank" class="repo-button">View Repo</a>
+        </div>
     </div>
-    
+
+    <script src="scripts.js"></script>
 </body>
 </html>

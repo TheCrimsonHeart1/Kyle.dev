@@ -69,22 +69,24 @@ body {
 }
 
 /* Inner content with a different background */
-.inner-content {
+.inner-content, .inner-content2, .inner-content3 {
     background-color: rgb(255, 216, 223); /* White background with slight transparency */
     border-radius: 15px; /* Rounded corners inside */
     padding: 30px 40px;
     color: #333; /* Dark text for readability */
     box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional subtle shadow */
+    margin-top: 20px;
+    font-weight: normal;
 }
 
 /* Styling for h2 inside the inner content */
-.inner-content h2 {
+.inner-content h2, .inner-content2 h2, .inner-content3 h2 {
     margin-top: 20px;
     margin-bottom: 15px;
 }
 
 /* Styling for paragraphs inside inner content */
-.inner-content p {
+.inner-content p, .inner-content2 p, .inner-content3 p {
     max-width: 700px;
     margin: 0 auto 20px auto;
     font-weight: normal;
@@ -97,6 +99,52 @@ body {
     margin: 20px auto;
     display: block;
 }
+
+/* Tabs container */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 40px; /* Adds space before the buttons */
+}
+
+/* Individual tab styling */
+.tablink {
+    background-color: rgb(230, 174, 183);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 0 5px;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.tablink:hover {
+    background-color: #ff4081;
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Tab content styling */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    background-color: rgb(255, 216, 223);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Show the active tab content */
+.tabcontent.active {
+    display: block;
+}
+
+/* Active tab styling */
+.tablink.active {
+    background-color: #ff4081;
+}
+
 /* Hide scrollbar but still allow scrolling */
 body::-webkit-scrollbar {
     width: 0px;   /* For vertical scrollbar */
@@ -110,21 +158,29 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-track {
     background: transparent; /* Hide the track */
 }
-.inner-content2 {
-    background-color: rgb(255, 216, 223); /* White background with slight transparency */
-    border-radius: 15px; /* Rounded corners inside */
-    padding: 30px 40px;
-    color: #333; /* Dark text for readability */
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional subtle shadow */
-    margin-top: 20px;
-    font-weight: normal;
+
+/* Styling for the "View Repo" button */
+.repo-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: rgb(230, 174, 183); /* Matching with active tab color */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.inner-content3 {
-    background-color: rgb(255, 216, 223); /* White background with slight transparency */
-    border-radius: 15px; /* Rounded corners inside */
-    padding: 30px 40px;
-    color: #333; /* Dark text for readability */
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional subtle shadow */
-    margin-top: 20px;
-    font-weight: normal;
+
+.repo-button:hover {
+    background-color: #ff4081; /* Slightly darker pink on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+.repo-button:active {
+    transform: translateY(1px); /* Subtle click effect */
+}
+
+.repo-button:focus {
+    outline: none; /* Remove outline on focus */
 }
